@@ -1,0 +1,10 @@
+`include"Inv_Mix_Columns.v"
+module Inv_Mix_Columns_tb();
+reg [0:127]in;
+wire [0:127]out;
+Inv_Mix_Columns inv(in,out);
+initial 
+begin
+
+end
+endmodule 

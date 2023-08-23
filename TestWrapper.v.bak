@@ -1,0 +1,22 @@
+`include"AES_Encrypt.v"
+`include"AES_Decrypt.v"
+module TestWrapper
+(
+output flag_Encrypt,
+output flag_Decrypt
+);
+
+wire [127:0] in;
+assign in=128'h00112233445566778899aabbccddeeff;
+wire [191:0] Key192;
+assign Key=192'h000102030405060708090a0b0c0d0e0f1011121314151617;
+wire [127:0] out0;
+wire [127:0] out1;
+wire [127:0]Expected_Out_Encrypt;
+assign Expected_Out_Encrypt=128'hdda97ca4864cdfe06eaf70a0ec0d7191;
+
+AES_Encrypt #(.Width(192),.Nk(6),.Nr(12)) aes_encrypt (in,Key192,out0);
+AES_Decrypt #(.Width(192),.Nk(6),.Nr(12)) aes_decrypt (out0,Key192,out1);
+assign flag_Encrypt=(out0==Expected_Out_Encrypt)?1:0;
+assign flag_Decrypt=(in==out1)?1:0;
+endmodule 

@@ -1,0 +1,16 @@
+C:/intelFPGA/18.1/Key_Expansion.v {1 {vlog -work work -stats=none C:/intelFPGA/18.1/Key_Expansion.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module Key_Expansion
+
+Top level modules:
+	Key_Expansion
+
+} {} {}} C:/intelFPGA/18.1/Key_Expansion_tb.v {1 {vlog -work work -stats=none {C:\intelFPGA\18.1\Key_Expansion_tb.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module Key_Expansion
+-- Compiling module Key_Expansion_tb
+
+Top level modules:
+	Key_Expansion_tb
+
+} {} {}}
